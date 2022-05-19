@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECB390;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* estilos del header*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgLogo {
+    width: 12rem;
+}
+
+.tituloLogo {
+    color: #352c2b;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+.bajoTitulo {
+    color: #352c2b;
+    font-size: 1.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.redesSociales {
+    height: 3rem;
+    width: 6.7rem;
+    border-radius: 10px;
+    margin: 10px;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+}
+
+/* estilos del nav*/
+
+nav {
+    margin: 0.5rem;
+    position: sticky;
+    background-color: #F5EEDC;
+    color: gray;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2px;
+}
+
+nav ul li {
+    list-style-type: none;
+    font-size: 1rem;
+    width: 90px;
+    height: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #352c2b;
+}
+
+nav ul li a:hover {
+    color: darkgray;
+}
+
+/* estilos del main */
+
+main {
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+.parrafoPrincipal {
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.parrafoPrincipal2 {
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 1rem;
+}
+
+.imgCentral {
+    width: 18rem;
+    border: 10px solid antiquewhite;
+
+}
+
+.imgCentral2 {
+    width: 18rem;
+    border: 10px solid antiquewhite;
+}
+
+/* estilos main recetas*/
+
+.tituloComienzo {
+    color: #DD4A48;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 25px 25px;
+    font-size: 1.5rem;
+}
+
+.tituloRecetas {
+    color: #5e3f3f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font: optional;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    margin-top: 1.8rem;
+}
+
+.estilosRecetas {
+    color: #5e3f3f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+}
+
+/*estilos de page productos*/
+
+.pieImagenes {
+    color: #5e3f3f;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    margin: 5px 10px;
+}
+
+.parrafoProductos {
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 1rem;
+}
+
+.divProductos {
+    margin-top: 0.6rem;
+}
+
+.tituloProductos {
+    color: #DD4A48;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 25px 25px;
+    font-size: 1.5rem;
+}
+
+
+/*estilos de contactos*/
+
+.imagenContacto {
+    width: 100px;
+    height: 100px;
+    margin: 50px 50px;
+}
+
+.imagenUbicacion {
+    width: 300px;
+    height: 200px;
+    margin: 50px 50px
+}
+
+.domicilio {
+    color: #5e3f3f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+/*estilos del footer*/
+
+footer {
+    font-size: 0.6rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #352c2b;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+}
+
+span {
+    color: blue;
+}
+
+/*media q para tablet de 768 index*/
+
+@media screen and (min-width: 768px) {
+    main {
+
+        display: grid;
+        grid-template-areas: "parrafoPrincipal"
+            "imgCentral"
+            "parrafoPrincipal2"
+            "imgCentral2"
+            "footer";
+    }
+
+    .parrafoPrincipal {
+        grid-area: parrafoPrincipal;
+    }
+
+    .imgCentral {
+        grid-area: imgCentral;
+    }
+
+    .parrafoPrincipal2 {
+        grid-area: parrafoPrincipal2;
+    }
+
+    .imgCentral2 {
+        grid-area: imgCentral2;
+    }
+}
+
+/* media q para desktops de 1024px index */
+@media screen and (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-areas: "parrafoPrincipal imgCentral"
+            "parrafoPrincipal2 imgCentral2"
+            "footer footer";
+    }
+
+    .parrafoPrincipal {
+        grid-area: parrafoPrincipal;
+    }
+
+    .imgCentral {
+        grid-area: imgCentral;
+        width: 100%;
+    }
+
+    .parrafoPrincipal2 {
+        grid-area: parrafoPrincipal2;
+    }
+
+    .imgCentral2 {
+        grid-area: imgCentral2;
+        width: 100%;
+    }
+
+}
+
+/* media q para desktops de 1024px recetas*/
+
+@media screen and (min-width: 1024px) {
+    .mainRecetas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "tituloComienzo tituloComienzo"
+            "tituloRecetas tituloRecetas"
+            "imgEnsalada imgYogurt"
+            "estilosRecetas estilosRecetas"
+            "footer footer";
+        text-align: center;
+        align-items: flex-start;
+    }
+
+    .tituloComienzo {
+        grid-area: tituloComienzo;
+    }
+
+    .tituloRecetas {
+        grid-area: tituloRecetas;
+    }
+
+    .imgEnsalada {
+        grid-area: imgEnsalada;
+        width: 100%;
+    }
+
+    .estiloRecetas {
+        grid-area: estiloRecetas;
+    }
+
+    .imgYogurt {
+        grid-area: imgYogurt;
+        width: 100%;
+    }
+}
+
+/*media q para tablet de 768 productos */
+
+@media screen and (min-width: 768px) {
+    .mainProductos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "tituloProductos tituloProductos"
+            " parrafoProductos parrafoProductos"
+            "imgProductos1 imgProductos2"
+            "imgProductos3 imgProductos4"
+            "imgProductos5 imgProductos6"
+            "footer footer";
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .parrafoProductos {
+        grid-area: parrafoPrincipal;
+    }
+
+    .tituloProductos {
+        grid-area: tituloProductos;
+    }
+
+    .imgProductos1 {
+        grid-area: imgProductos1;
+        width: 100%;
+    }
+
+    .imgProductos2 {
+        grid-area: imgProductos2;
+        width: 100%;
+    }
+
+    .imgProductos3 {
+        grid-area: imgProductos3;
+        width: 100%;
+    }
+
+    .imgProductos4 {
+        grid-area: imgProductos4;
+        width: 100%;
+    }
+
+    .imgProductos5 {
+        grid-area: imgProductos6;
+        width: 100%;
+    }
+
+    .imgProductos6 {
+        grid-area: imgProductos6;
+
+    }
+}
+
+/* media q para tablet de 1024 productos*/
+
+@media screen and (min-width: 1024px) {
+    .mainProductos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "tituloProductos tituloProductos"
+            "parrafoProductos parrafoProductos"
+            "imgProductos1 imgProductos2"
+            "imgProductos3 imgProductos4"
+            "imgProductos5 imgProductos6"
+            "footer footer";
+
+    }
+
+    .tituloProductos {
+        grid-area: tituloProductos;
+    }
+
+    .parrafoProductos {
+        grid-area: parrafoPrincipal;
+    }
+
+    .imgProductos1 {
+        grid-area: imgProductos1;
+    }
+
+    .imgProductos2 {
+        grid-area: imgProductos2;
+    }
+
+    .imgProductos3 {
+        grid-area: imgProductos3;
+    }
+
+    .imgProductos4 {
+        grid-area: imgProductos4;
+    }
+
+    .imgProductos5 {
+        grid-area: imgProductos5;
+    }
+
+    .imgProductos6 {
+        grid-area: imgProductos6;
+    }
+}
