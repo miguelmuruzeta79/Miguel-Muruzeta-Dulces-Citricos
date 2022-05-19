@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #ECB390;
+    background-image: linear-gradient(#ECB390, #e9d0c1);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -27,13 +27,13 @@ header {
     color: #352c2b;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: underline;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1.2rem;
 }
 
 .bajoTitulo {
     color: #352c2b;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 1rem;
 }
@@ -47,7 +47,23 @@ header {
     z-index: 0;
     top: 0;
     right: 0;
+    animation-name: latir;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
+@keyframes latir {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(0.9);
+    }
+}
+
+
 
 /* estilos del nav*/
 
@@ -67,7 +83,7 @@ nav ul {
 
 nav ul li {
     list-style-type: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     width: 90px;
     height: 20px;
     text-align: center;
