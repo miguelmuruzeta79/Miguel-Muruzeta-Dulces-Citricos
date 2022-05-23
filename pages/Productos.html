@@ -6,15 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- link de bp-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <!-- link css-->
     <link rel="stylesheet" href="../css/style.css">
 
     <title>Productos</title>
 </head>
 
 <body>
-
-    
-
+    <div class="divBody">
         <header>
             <div>
                 <img class="imgLogo" src="../img/Logodulcescitricos2relleno redimen.jpg" alt="Logo Dulces Citricos">
@@ -27,29 +33,36 @@
                 <img class="redesSociales" src="../img/imagen redes final.png" alt="Contactos redes sociales">
             </div>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="Nosotros.html">Nosotros</a>
-                    </li>
-                    <li>
-                        <a href="Recetas.html">Recetas</a>
-                    </li>
-                    <li>
-                        Productos
-                    </li>
-                    <li>
-                        <a href="Contactos.html">Contacto</a>
-                    </li>
-                </ul>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" Home>Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/Nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" aria-current="page">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/Recetas.html">Recetas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/Contactos.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
 
         </header>
-
-
 
         <main class="mainProductos">
 
@@ -57,61 +70,57 @@
                 Los productos mas sanos y confiables para la familia
             </h3>
 
-            <div>
+            <p class="parrafoProductos">
+                Todos nuestros productos bajo las mas extrictas normas de control, para que lleguen a los usuarios el mejor producto. Para ello trabajamos con semillas controladas y todas nuestras plantas de proceso con el mas alto nivel de personal calificado y preparado.
+            </p>
 
-                <p class="parrafoProductos">
-                    Fuentes de vitamina C y antioxidantes por excelencia, los cítricos son vitales en una dieta sana y nutritiva. Ricos en azúcares, son fáciles de asimilar por el organismo. Su abundante agua contribuye a la hidratación del cuerpo.
-                    
-                </p>
+            <div class="imgMandarinas">
+                <figure class="pieImagenes"> Mandarinas</figure>
+                <img src="../img/mandarinasproducto redien.jpeg" alt="Mandarinas" width="450" height="350">
+            </div>
+
+            <div class="imgNaranjas">
+                <figure class="pieImagenes"> Naranjas</figure>
+                <img src="../img/naranjas redimen.jpg" alt="naranjas" width="450" height="350">
+            </div>
+
+            <div class="imgPomelos">
+                <figure class="pieImagenes"> Pomelos</figure>
+                <img src="../img/pomelos redimen.jpg" alt="Pomelos" width="450" height="350">
+            </div>
+
+            <div class="imgLimas">
+                <figure class="pieImagenes"> Limas</figure>
+                <img src="../img/limas redimen.jpg" alt="Limas" width="450" height="350">
+            </div>
 
 
-                <div class="divProductos">
+            <div class="imgCitricos">
+                <figure class="pieImagenes"> Productos de exportación</figure>
+                <img src="../img/limones transporte.jpg" alt="Citricos de alta calidad" width="450" height="350">
+            </div>
 
-                    <div class="imgProductos1">
-                        <img src="../img/mandarinasproducto redien.jpeg" alt="Mandarinas">
-                    </div>
 
-                    <figure class="pieImagenes"> Mandarinas</figure>
-
-                    <div class="imgProductos2">
-                        <img src="../img/naranjas redimen.jpg" alt="naranjas">
-                    </div>
-                    <figure class="pieImagenes"> Naranjas</figure>
-
-                    <div class="imgProductos3">
-                        <img src="../img/pomelos redimen.jpg" alt="Pomelos">
-                    </div>
-                    <figure class="pieImagenes"> Pomelos</figure>
-
-                    <div class="imgProductos4">
-                        <img src="../img/limas redimen.jpg" alt="Limas">
-                    </div>
-
-                    <figure class="pieImagenes"> Limas</figure>
-
-                    <div class="imgProductos5">
-                        <img src="../img/limones transporte.jpg" alt="Citricos de alta calidad">
-                    </div>
-
-                    <figure class="pieImagenes"> Productos de exportación</figure>
-
-                    <div class="imgProductos6">
-                        <img src="../img/citricos varios redimensionada.jpg" alt="Cerificaion Global GAP">
-                    </div>
-
-                    <figure class="pieImagenes"> Certificacion internacional G.A.P.</figure>
-                </div>
+            <div class="imgCertificacion">
+                <figure class="pieImagenes"> Certificacion internacional G.A.P.</figure>
+                <img src="../img/citricos varios redimensionada.jpg" alt="Cerificaion Global GAP" width="450"
+                    height="350">
+            </div>
 
         </main>
-   
 
-    <footer>
-        <p> © 2022, DULCES CÍTRICOS . TODOS LOS DERECHOS RESERVADOS. QUIEN SIEMBRA VERDAD, COSECHA CONFIANZA. 
-        <span class="powerMaic"> POWERED BY MAIC</span></p>
-   </footer>
+        <footer>
+            <p> © 2022, DULCES CÍTRICOS . TODOS LOS DERECHOS RESERVADOS. QUIEN SIEMBRA VERDAD, COSECHA CONFIANZA.
+                <span class="powerMaic"> POWERED BY MAIC</span>
+            </p>
+        </footer>
 
+    </div>
 
-
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 
 
 </body>

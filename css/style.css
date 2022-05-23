@@ -1,3 +1,4 @@
+/*reset*/
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,9 @@
 
 body {
     background-image: linear-gradient(#ECB390, #e9d0c1);
+    }
+
+.divBody{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -57,36 +61,22 @@ header {
     from {
         transform: scale(0.7);
     }
-
     to {
         transform: scale(0.9);
     }
 }
 
-
-
 /* estilos del nav*/
 
-nav {
-    margin: 0.5rem;
-    position: sticky;
-    background-color: #F5EEDC;
-    color: gray;
-    width: 100%;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2px;
+.estilo-nav {
+    color: #582621;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 nav ul li {
     list-style-type: none;
-    font-size: 1.1rem;
-    width: 90px;
-    height: 20px;
-    text-align: center;
+    font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -98,6 +88,12 @@ nav ul li a {
 nav ul li a:hover {
     color: darkgray;
 }
+
+.navbar-nav{
+padding: 1rem;
+margin: 1rem;
+}
+
 
 /* estilos del main */
 
@@ -111,7 +107,7 @@ main {
     font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
-    margin: 0.5rem;
+    margin: 1rem;
 }
 
 .parrafoPrincipal2 {
@@ -124,12 +120,27 @@ main {
 .imgCentral {
     width: 18rem;
     border: 10px solid antiquewhite;
-
 }
 
 .imgCentral2 {
     width: 18rem;
     border: 10px solid antiquewhite;
+}
+
+/*estilos de Nosotros*/
+.tituloNosotros {
+    color: #DD4A48;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 25px 25px;
+    font-size: 1.5rem;
+}
+
+.parrafoNosotros {
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 1rem;
 }
 
 /* estilos main recetas*/
@@ -264,24 +275,27 @@ span {
         grid-template-areas: "parrafoPrincipal imgCentral"
             "parrafoPrincipal2 imgCentral2"
             "footer footer";
+            grid-gap: 0.5rem;
     }
 
     .parrafoPrincipal {
         grid-area: parrafoPrincipal;
+        margin-left: 1rem;
     }
 
     .imgCentral {
         grid-area: imgCentral;
-        width: 100%;
+        width: 80%;
     }
 
     .parrafoPrincipal2 {
         grid-area: parrafoPrincipal2;
+        margin-right: 1rem;
     }
 
     .imgCentral2 {
         grid-area: imgCentral2;
-        width: 100%;
+        width: 80%;
     }
 
 }
@@ -332,66 +346,71 @@ span {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "tituloProductos tituloProductos"
             " parrafoProductos parrafoProductos"
-            "imgProductos1 imgProductos2"
-            "imgProductos3 imgProductos4"
-            "imgProductos5 imgProductos6"
+            "imgMandarinas imgNaranjas "
+            "imgLimas imgPomelos"
+            "imgCitricos imgCertificacion"
             "footer footer";
-        align-items: flex-start;
-        text-align: center;
-    }
-
-    .parrafoProductos {
-        grid-area: parrafoPrincipal;
+        grid-gap: 0.5rem;
     }
 
     .tituloProductos {
         grid-area: tituloProductos;
     }
 
-    .imgProductos1 {
-        grid-area: imgProductos1;
-        width: 100%;
+    .parrafoProductos {
+        grid-area: parrafoProductos;
     }
 
-    .imgProductos2 {
-        grid-area: imgProductos2;
-        width: 100%;
+    .imgMandarinas {
+        grid-area: imgMandarinas;
+        width: auto;
     }
 
-    .imgProductos3 {
-        grid-area: imgProductos3;
-        width: 100%;
+    .imgNaranjas {
+        grid-area: imgNaranjas;
+        width: auto;
     }
 
-    .imgProductos4 {
-        grid-area: imgProductos4;
-        width: 100%;
+    .imgPomelos {
+        grid-area: imgPomelos;
+        width: auto;
     }
 
-    .imgProductos5 {
-        grid-area: imgProductos6;
-        width: 100%;
+    .imgLimas {
+        grid-area: imgLimas;
+        width: auto;
     }
 
-    .imgProductos6 {
-        grid-area: imgProductos6;
+    .imgCitricos {
+        grid-area: imgCitricos;
+        width: auto;
+    }
 
+    .imgCertificacion {
+        grid-area: imgCertificacion;
+        width: auto;
+    }
+
+    footer {
+        grid-area: footer;
     }
 }
+
+
 
 /* media q para tablet de 1024 productos*/
 
 @media screen and (min-width: 1024px) {
     .mainProductos {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "tituloProductos tituloProductos"
             "parrafoProductos parrafoProductos"
-            "imgProductos1 imgProductos2"
-            "imgProductos3 imgProductos4"
-            "imgProductos5 imgProductos6"
+            "imgMandarinas imgNaranjas "
+            "imgLimas imgPomelos"
+            "imgCitricos imgCertificacion"
             "footer footer";
-
+        text-align: center;
+        grid-gap: 0.5rem;
     }
 
     .tituloProductos {
@@ -399,30 +418,69 @@ span {
     }
 
     .parrafoProductos {
-        grid-area: parrafoPrincipal;
+        grid-area: parrafoProductos;
     }
 
-    .imgProductos1 {
-        grid-area: imgProductos1;
+    .imgMandarinas {
+        grid-area: imgMandarinas;
     }
 
-    .imgProductos2 {
-        grid-area: imgProductos2;
+    .imgNaranjas {
+        grid-area: imgNaranjas;
     }
 
-    .imgProductos3 {
-        grid-area: imgProductos3;
+    .imgPomelos {
+        grid-area: imgPomelos;
     }
 
-    .imgProductos4 {
-        grid-area: imgProductos4;
+    .imgLimas {
+        grid-area: imgLimas;
     }
 
-    .imgProductos5 {
-        grid-area: imgProductos5;
+    .imgCitricos {
+        grid-area: imgCitricos;
     }
 
-    .imgProductos6 {
-        grid-area: imgProductos6;
+    .imgCertificacion {
+        grid-area: imgCertificacion;
     }
+
+    footer {
+        grid-area: footer;
+    }
+}
+
+/* media q para desktops de 1024px nosotros */
+@media screen and (min-width: 1024px) {
+    .mainNosotros {
+        display: grid;
+        grid-template-areas: "tituloNosotros tituloNosotros"
+            "imgFabrica parrafoNosotros "
+            "imgTrabajo vidCitricos"
+            "footer footer";
+        text-align: center;
+        grid-gap: 1rem;
+        margin: 2rem;
+    }
+
+    .parrafoNosotros {
+        grid-area: parrafoNosotros;
+    }
+
+    .vidCitricos {
+        grid-area: vidCitricos;
+    }
+
+    .imgTrabajo {
+        grid-area: imgTrabajo;
+    }
+
+    .imgFabrica {
+        grid-area: imgFabrica;
+    }
+
+    .tituloNosotros {
+        grid-area: tituloNosotros;
+    }
+
 }
