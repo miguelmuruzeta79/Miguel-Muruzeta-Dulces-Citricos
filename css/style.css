@@ -89,12 +89,6 @@ nav ul li a:hover {
     color: darkgray;
 }
 
-.navbar-nav{
-padding: 1rem;
-margin: 1rem;
-}
-
-
 /* estilos del main */
 
 main {
@@ -119,12 +113,12 @@ main {
 
 .imgCentral {
     width: 18rem;
-    border: 10px solid antiquewhite;
+    box-shadow: 5px 7px #352c2b;
 }
 
 .imgCentral2 {
     width: 18rem;
-    border: 10px solid antiquewhite;
+    box-shadow: 5px 7px #352c2b;
 }
 
 /*estilos de Nosotros*/
@@ -198,8 +192,28 @@ main {
     font-size: 1.5rem;
 }
 
-
 /*estilos de contactos*/
+.tituloContacto{
+    color: #DD4A48;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 25px 25px;
+    font-size: 1.5rem;
+}
+
+fieldset {
+   
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+  }
+  
+  input {
+    margin: 2px;
+  }
 
 .imagenContacto {
     width: 100px;
@@ -210,7 +224,7 @@ main {
 .imagenUbicacion {
     width: 300px;
     height: 200px;
-    margin: 50px 50px
+    margin: 50px 50px   
 }
 
 .domicilio {
@@ -296,6 +310,7 @@ span {
     .imgCentral2 {
         grid-area: imgCentral2;
         width: 80%;
+        margin-top: 1rem;
     }
 
 }
@@ -483,4 +498,40 @@ span {
         grid-area: tituloNosotros;
     }
 
+}
+
+/* media q para desktops de 1024px Contacto*/
+
+@media screen and (min-width: 1024px) {
+    .mainContacto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "tituloComienzo tituloComienzo"
+                        "imagenContacto imagenUbicacion"
+                        "formularioContacto domicilio"
+                        "footer footer";
+       
+    
+    }
+
+    .tituloContacto {
+        grid-area: tituloComienzo;
+    }
+
+    .imgagenUbicacion {
+        grid-area: imgagenUbicacion;
+        width: 100%;
+    }
+
+    .formularioContacto {
+        grid-area: formularioContacto;
+    }
+
+    .domicilio {
+        grid-area: domicilio;
+        
+    }
+    .imagenContacto{
+        grid-area: imagenContacto;
+    }
 }
