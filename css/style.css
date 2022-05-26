@@ -7,9 +7,9 @@
 
 body {
     background-image: linear-gradient(#ECB390, #e9d0c1);
-    }
+}
 
-.divBody{
+.divBody {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -29,10 +29,9 @@ header {
 
 .tituloLogo {
     color: #352c2b;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-decoration: underline;
-    font-size: 3.5rem;
-    margin-bottom: 1.2rem;
+    font-family: 'Square Peg', cursive;
+    font-size: 6rem;
+    font-weight: bold;
 }
 
 .bajoTitulo {
@@ -61,6 +60,7 @@ header {
     from {
         transform: scale(0.7);
     }
+
     to {
         transform: scale(0.9);
     }
@@ -68,25 +68,9 @@ header {
 
 /* estilos del nav*/
 
-.estilo-nav {
-    color: #582621;
-    font-size: 1.7rem;
-    font-weight: bold;
-}
-
 nav ul li {
-    list-style-type: none;
-    font-size: 1.5rem;
+       font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #352c2b;
-}
-
-nav ul li a:hover {
-    color: darkgray;
 }
 
 /* estilos del main */
@@ -136,6 +120,13 @@ main {
     text-align: center;
     margin: 1rem;
 }
+.estiloFabrica{
+    box-shadow: 6px 8px rgb(45, 42, 42);
+}
+.estiloMandas{
+    box-shadow: 6px 8px rgb(45, 42, 42);
+}
+
 
 /* estilos main recetas*/
 
@@ -160,10 +151,34 @@ main {
 .estilosRecetas {
     color: #5e3f3f;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.imgRecetas{
+    box-shadow: 6px 8px grey;
 }
 
 /*estilos de page productos*/
+
+.mandarinaEstilo{
+    box-shadow: 6px 8px grey;
+}
+.naranjaEstilo{
+    box-shadow: 6px 8px grey;
+}
+.limaEstilo{
+    box-shadow: 6px 8px grey;
+}
+.pomeloEstilo{
+    box-shadow: 6px 8px grey;
+}
+.certificacionEstilo{
+    box-shadow: 6px 8px grey;
+}
+.citricoEstilo{
+    box-shadow: 6px 8px grey;
+}
 
 .pieImagenes {
     color: #5e3f3f;
@@ -193,7 +208,7 @@ main {
 }
 
 /*estilos de contactos*/
-.tituloContacto{
+.tituloContacto {
     color: #DD4A48;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -203,28 +218,23 @@ main {
 
 fieldset {
    
-  }
-  
-  legend {
-    background-color: gray;
-    color: white;
-    padding: 5px 10px;
-  }
-  
-  input {
-    margin: 2px;
-  }
+}
+
+input {
+    margin: 2px;  
+}
 
 .imagenContacto {
     width: 100px;
     height: 100px;
-    margin: 50px 50px;
+    margin: 15px;
 }
 
 .imagenUbicacion {
     width: 300px;
     height: 200px;
-    margin: 50px 50px   
+    margin: 50px 25px 25px 25px;
+    border-radius: 1rem;
 }
 
 .domicilio {
@@ -232,6 +242,7 @@ fieldset {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
 }
+
 
 /*estilos del footer*/
 
@@ -289,7 +300,7 @@ span {
         grid-template-areas: "parrafoPrincipal imgCentral"
             "parrafoPrincipal2 imgCentral2"
             "footer footer";
-            grid-gap: 0.5rem;
+        grid-gap: 0.5rem;
     }
 
     .parrafoPrincipal {
@@ -507,11 +518,9 @@ span {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "tituloComienzo tituloComienzo"
-                        "imagenContacto imagenUbicacion"
-                        "formularioContacto domicilio"
-                        "footer footer";
-       
-    
+            "formularioContacto imagenUbicacion"
+            "formularioContacto domicilio"
+            "footer footer";
     }
 
     .tituloContacto {
@@ -529,9 +538,11 @@ span {
 
     .domicilio {
         grid-area: domicilio;
-        
     }
-    .imagenContacto{
+
+    .imagenContacto {
         grid-area: imagenContacto;
+        display: none;
+
     }
 }
